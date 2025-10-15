@@ -1,18 +1,17 @@
 import React from "react";
 
 const Characters = ({ characters, setCharacters }) => {
-  //Resetear personajes
-
   const resetCharacters = () => {
     setCharacters(null);
   };
+
   return (
     <div className="characters">
-      <h1>Characters</h1>
+      <h1>Personajes</h1>
       <span className="back-home" onClick={resetCharacters}>
         Volver al inicio
       </span>
-      <div className=" container-characters">
+      <div className="container-characters">
         {characters.map((character, index) => (
           <div className="character-container" key={index}>
             <div>
@@ -33,11 +32,11 @@ const Characters = ({ characters, setCharacters }) => {
               </h6>
               <p>
                 <span className="text-grey">Episodios: </span>
-                <span>{character.episode.length}</span>
+                {character.episode.length}
               </p>
               <p>
                 <span className="text-grey">Especie: </span>
-                <span>{character.species}</span>
+                {character.species}
               </p>
             </div>
           </div>
